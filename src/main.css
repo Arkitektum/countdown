@@ -1,0 +1,267 @@
+@font-face {
+  font-family: digits;
+  src: url(fonts/digits.ttf);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 1px -1px 1px rgba(255, 0, 0, 0.2),
+      0px 1px 1px rgba(255, 255, 0, 0.15), 0 0 7px;
+  }
+  15% {
+    text-shadow: -1px 1px 0px rgba(255, 0, 0, 0.4),
+      0.78px 0.5px 2px rgba(255, 255, 0, 0.02), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1px -1px 1px rgba(255, 0, 0, 0.5),
+      -1px 1px 1px rgba(255, 255, 0, 0.05), 0 1px 5px;
+  }
+  75% {
+    text-shadow: -1px 1px 1px rgba(255, 0, 0, 0.3),
+      1px 0.5px 2px rgba(255, 255, 0, 0.02), 0 0 8px;
+  }
+  100% {
+    text-shadow: -1px 0.5px 1px rgba(255, 0, 0, 0.4),
+      0px -1px 1px rgba(255, 255, 0, 0.05), 0 0 5px;
+  }
+}
+
+@keyframes textColor {
+  0% {
+    color: #fd200570;
+  }
+  25% {
+    color: #fa100538;
+  }
+  27% {
+    color: #fa200548;
+  }
+  45% {
+    color: #fa200580;
+  }
+  50% {
+    color: #ef1015a0;
+  }
+  52% {
+    color: #fa200160;
+  }
+  75% {
+    color: #f6210280;
+  }
+  98% {
+    color: #f62102a0;
+  }
+  99% {
+    color: #f6210220;
+  }
+  100% {
+    color: #fa3025a0;
+  }
+}
+
+@keyframes glitchZoom {
+  0% {
+    zoom: 1;
+    left: 50.13%;
+  }
+  1% {
+    left: 50%;
+  }
+  23% {
+    zoom: 1;
+  }
+  25% {
+    zoom: 1.002;
+    left: 50%;
+  }
+  27% {
+    zoom: 1;
+    left: 50%;
+  }
+  50% {
+    zoom: 1;
+    left: 50%;
+  }
+  75% {
+    zoom: 1;
+    left: 50%;
+    top: 50%;
+  }
+  76% {
+    zoom: 1;
+    left: 50%;
+    top: 50.01%;
+  }
+  78% {
+    zoom: 1;
+    top: 50%;
+  }
+  100% {
+    zoom: 1;
+    left: 50%;
+  }
+}
+
+@keyframes backgroundLines {
+  0% {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(30, 0, 0, 0.25),
+      rgba(15, 15, 0, 0.25) 3px,
+      transparent 2.9px,
+      transparent 2px
+    );
+  }
+  25% {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(30, 0, 0, 0.3),
+      rgba(15, 15, 0, 0.35) 3.1px,
+      transparent 3px,
+      transparent 2.1px
+    );
+  }
+  50% {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(30, 0, 0, 0.35),
+      rgba(15, 15, 0, 0.35) 3px,
+      transparent 3px,
+      transparent 2px
+    );
+  }
+  75% {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(30, 0, 0, 0.35),
+      rgba(15, 15, 0, 0.3) 2.8px,
+      transparent 3px,
+      transparent 2px
+    );
+  }
+  100% {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(30, 0, 0, 0.37),
+      rgba(15, 15, 0, 0.38) 3px,
+      transparent 3.1px,
+      transparent 2px
+    );
+  }
+}
+@keyframes backgroundGlow {
+  0% {
+    background-image: radial-gradient(rgba(255, 177, 50, 0.06), black 120%);
+  }
+  25% {
+    background-image: radial-gradient(rgba(255, 174, 49, 0.062), black 120%);
+  }
+  50% {
+    background-image: radial-gradient(rgba(255, 175, 43, 0.06), black 120%);
+  }
+  75% {
+    background-image: radial-gradient(rgba(255, 173, 47, 0.061), black 120%);
+  }
+  100% {
+    background-image: radial-gradient(rgba(255, 175, 42, 0.063), black 120%);
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #011610;
+  color: #fa200500;
+  padding: 0;
+  margin: 0;
+  background-image: radial-gradient(rgba(255, 155, 1, 0.08), black 120%);
+  height: 100vh;
+  text-shadow: 0 0 20px #ff2000;
+  animation: textShadow 8s infinite, backgroundGlow 1.2s infinite,
+    textColor 11.2s infinite;
+  background-attachment: fixed;
+  zoom: 1.7;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(30, 0, 0, 0.15),
+    rgba(15, 15, 0, 0.15) 3px,
+    transparent 3px,
+    transparent 2px
+  );
+  animation: backgroundLines 7s infinite;
+}
+
+.center-block {
+  display: block;
+  text-align: center;
+}
+
+.clock {
+  font-family: digits;
+  font-size: 86px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  zoom: 1;
+  animation: glitchZoom 8s infinite;
+  .separator {
+    animation: blinker 1s
+      linear(
+        0 0%,
+        0 1.8%,
+        0.01 3.6%,
+        0.03 6.35%,
+        0.07 9.1%,
+        0.13 11.4%,
+        0.19 13.4%,
+        0.27 15%,
+        0.34 16.1%,
+        0.54 18.35%,
+        0.66 20.6%,
+        0.72 22.4%,
+        0.77 24.6%,
+        0.81 27.3%,
+        0.85 30.4%,
+        0.88 35.1%,
+        0.92 40.6%,
+        0.94 47.2%,
+        0.96 55%,
+        0.98 64%,
+        0.99 74.4%,
+        1 86.4%,
+        1 100%
+      )
+      infinite;
+  }
+}
